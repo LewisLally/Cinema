@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #111;
+  font-family: Arial, sans-serif;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.navigation nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navigation button {
+  padding: 10px 40px;
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: lightgrey;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.navigation button:hover {
+  background-color: darkgray;
+  transform: scale(1.05);
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card-movies {
+  width: 200px;
+  min-height: 260px;
+  margin: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-movies:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-movies img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-movies h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.card-movies p {
+  margin: 4px 0;
+}
+
+.movie-detail-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card-detailsText {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.error {
+  color: #b00020;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .navigation button {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  .movie-detail-container {
+    margin: 20px 10px;
+  }
+}
